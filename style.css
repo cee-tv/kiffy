@@ -1,0 +1,32 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  min-width: 340px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+}
+.key-value {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.3rem;
+  word-break: break-all;
+  color: #22223b;
+}
+.spinner-border {
+  width: 2rem;
+  height: 2rem;
+}
+.footer {
+  margin-top: 3rem;
+  color: #868686;
+  font-size: 0.97rem;
+  text-align: center;
+}
