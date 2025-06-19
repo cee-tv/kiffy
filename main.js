@@ -9,23 +9,24 @@ async function loadKey() {
     </div>
   `;
 
-  const today = new Date();
-  const yyyy = today.getUTCFullYear();
-  const mm = String(today.getUTCMonth() + 1).padStart(2, '0');
-  const dd = String(today.getUTCDate()).padStart(2, '0');
+  // Get today's date in UTC
+  const now = new Date();
+  const yyyy = now.getUTCFullYear();
+  const mm = String(now.getUTCMonth() + 1).padStart(2, '0');
+  const dd = String(now.getUTCDate()).padStart(2, '0');
   const fileName = `${yyyy}-${mm}-${dd}.txt`;
 
-  // Update the username and repo as needed
+  // Path to your keys folder using raw.githubusercontent.com and your repo info
   const url = `https://raw.githubusercontent.com/Warren122093/daily-key-generator/main/keys/${fileName}`;
 
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error('Key not found yet.');
-    const key = (await response.text()).trim();
+    const key = await response.text();
     keyArea.innerHTML = `
-      <div class="alert alert-success d-flex align-items-center justify-content-center" role="alert">
+      <div class="alert alert-success d-flex align-items-center justify-content-center" role="alert" style="width:100%;">
         <i class="bi bi-shield-lock me-2"></i>
-        <span class="key-value">${key}</span>
+        <div class="key-value" style="white-space: pre-wrap; margin-bottom: 0;">${key}</div>
       </div>
     `;
   } catch (e) {
@@ -37,4 +38,6 @@ async function loadKey() {
     `;
   }
 }
+
+// Ensure the key is loaded when the page is loaded or reloaded
 window.onload = loadKey;
