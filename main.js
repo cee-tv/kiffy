@@ -16,8 +16,8 @@ async function loadKey() {
   const dd = String(now.getUTCDate()).padStart(2, '0');
   const fileName = `${yyyy}-${mm}-${dd}.txt`;
 
-  // Path to your keys folder using raw.githubusercontent.com and your repo info
-  const url = `https://raw.githubusercontent.com/Warren122093/daily-key-generator/main/keys/${fileName}`;
+  // Correct repository and branch ("main")
+  const url = `https://raw.githubusercontent.com/Warren122093/iptvphkey/main/keys/${fileName}`;
 
   try {
     const response = await fetch(url);
@@ -39,5 +39,4 @@ async function loadKey() {
   }
 }
 
-// Ensure the key is loaded when the page is loaded or reloaded
 window.onload = loadKey;
