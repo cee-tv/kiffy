@@ -27,9 +27,12 @@
           <span class="text-secondary">Fetching key&hellip;</span>
         </div>
       </div>
-      <div class="mt-4">
+      <div class="mt-4 d-flex justify-content-center gap-2">
         <button class="btn btn-outline-secondary btn-sm" onclick="loadKey()" title="Reload">
           <i class="bi bi-arrow-clockwise"></i> Reload Key
+        </button>
+        <button id="copy-btn" class="btn btn-outline-primary btn-sm" onclick="copyKey()" title="Copy Key" disabled>
+          <i class="bi bi-clipboard"></i> Copy Key
         </button>
       </div>
     </div>
