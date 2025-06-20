@@ -87,7 +87,7 @@ async function loadKey() {
   const fileName = `${yyyy}-${mm}-${dd}.txt`;
 
   // Correct repository and branch ("main")
-  const url = `https://raw.githubusercontent.com/cee-tv/kiffy/main/keys/${fileName}`;
+  const url = `https://raw.githubusercontent.com/warren122093/iptvphkey/main/keys/${fileName}`;
 
   try {
     const response = await fetch(url);
