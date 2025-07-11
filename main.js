@@ -1,7 +1,7 @@
 const directLinks = [
-  { url: "https://paypou.com/dhOopy8Lj/79592035", label: "Direct Link 1" },
-  { url: "https://cutpu.com/vvmAmJRO/79592035", label: "Direct Link 2" },
-  { url: "https://shrtq.com/J7VtPifS/79592035", label: "Direct Link 3" }
+  { url: "https://otieu.com/4/9559079", label: "Direct Link 1" },
+  { url: "https://otieu.com/4/9559079", label: "Direct Link 2" },
+  { url: "https://otieu.com/4/9559079", label: "Direct Link 3" }
 ];
 
 let linkStep = 0;
